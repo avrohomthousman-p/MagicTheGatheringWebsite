@@ -1,0 +1,44 @@
+.card {
+    background-color: aliceblue;
+    color: blue;
+    margin: 15px;
+}
+
+.cardSection img {
+    max-width: 230px;
+}
+
+.plus img, .minus img {
+    width: 50px;
+}
+
+
+.quantity {
+    color: #007fff;
+    font-size: 2em;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+div#addCards {
+    margin: 20px;
+}
+
+div#addCards img {
+    margin-right: 15px;
+    max-width: 275px;
+}
+
+div#formToAddCard {
+    border: #4ae solid 5px;
+    border-radius: 5px;
+    padding: 10px;
+    max-width: 350px;
+}
+
+div#submitBox {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+

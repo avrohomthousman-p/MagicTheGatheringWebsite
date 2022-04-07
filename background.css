@@ -1,0 +1,23 @@
+body{
+    margin: 0px;
+    border: solid blue 15px;
+    min-height: 100vh;
+    background-color: rgb(16, 26, 61);
+    color: white;
+}
+
+
+#logo {
+    width: 30px;
+    background-color: white;
+}
+
+
+li {
+    background-color: buttonface;
+}
+
+
+li a:hover {
+    background-color: greenyellow;
+}

@@ -1,0 +1,18 @@
+#innerContainer {
+    border: #4ae solid 5px;
+    border-radius: 5px;
+}
+
+form > div {
+    padding: 20px 40px 20px 40px;
+}
+
+form {
+    margin: 45px 70px 45px 70px;
+    border: #4ae solid 5px;
+    border-radius: 5px;
+}
+
+form span {
+    color: red;
+}

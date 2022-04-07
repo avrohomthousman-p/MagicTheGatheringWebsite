@@ -1,0 +1,21 @@
+div#right ul {
+    list-style-type: none;
+}
+
+
+div#right li {
+    background-color: rgb(16, 26, 61);
+}
+
+
+div#right {
+    margin-top: 20px;
+    padding-right: 30px;
+}
+
+
+div#left {
+    margin-top: 20px;
+    padding-left: 30px;
+}
+
