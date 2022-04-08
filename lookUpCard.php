@@ -72,6 +72,10 @@ session_start();
 
 
 
+if(!isset($_SESSION['loggedIn'])){
+    $_SESSION['loggedIn'] = false;
+}
+
 if(!$_SESSION['loggedIn']){
     echo(createHead("Manage Your Collection-Look Up A Card", array()));
     echo("<div class=\"text-center\">");
