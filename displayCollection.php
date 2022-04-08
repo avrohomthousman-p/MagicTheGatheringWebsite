@@ -8,6 +8,10 @@ $connection = new mysqli("localhost", "root",  "INSERT PASSWORD", "CardCollectio
 session_start();
 
 
+
+if(!isset($_SESSION['loggedIn'])){
+    $_SESSION['loggedIn'] = false;
+}
 if(!$_SESSION['loggedIn']){
     echo(createHead("Manage Your Colection-My Collection", array()));
     echo("<div class=\"text-center\">");
