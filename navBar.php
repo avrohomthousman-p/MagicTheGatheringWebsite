@@ -25,9 +25,6 @@ function createNavBar(){
                 <a class="nav-link" href="myDecks.php">My Decks </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="uploadACard.php">Upload a Card </a>
-            </li>
-            <li class="nav-item">
                 <a class="nav-link" href="emptyPage.php">Deck Analysis </a>
             </li>
             <li class="nav-item">
