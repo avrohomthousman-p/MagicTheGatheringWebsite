@@ -35,11 +35,8 @@ function addCard(isCommander){
             {cardname : $("input#cardName").val(), quantityNeeded : parseInt(($("input#amount").val())),
             addToCollection : $("input#addToCollection").prop("checked"), isCommander : isCommander },
             function(data){
-                if(data === "Error: insufficent copies"){
-                    $("span#insufficentCopies").text("You do not have enough copies availible.");
-                }
-                else if(data === "Error: that card is already in the deck"){
-                    $("span#insufficentCopies").text("That card is already in the deck.");
+                if(data.startsWith("Error: ")){
+                    $("span#insufficentCopies").text(data);
                 }
                 else{
                     //output the new HTML
