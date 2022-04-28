@@ -32,18 +32,26 @@ function httpRequest($url){
     $result = json_decode($response, true);
     curl_close($ch); // Close the connection
     
-    //gather results into new array
-    $cardData = array();
     
-
-    //The card name must be modified so it can be used as an HTML ID.
-    //So stip non alphebetics and replace spaces with underscores. 
-    $cardData['cardname'] = str_replace(" ", "_", $result['name']);
-    $cardData['cardname'] = preg_replace('/[^a-zA-Z_]/', "", $cardData['cardname']);
+    //gather results
     
+    if($result['object'] == "error"){
+        return $result;
+    }
+    else{
+        //use a new array that only includes the parts we need
+        $cardData = array();
+        
+        $cardData['object'] = $result['object'];
+        //The card name must be modified so it can be used as an HTML ID.
+        //So stip non alphebetics and replace spaces with underscores. 
+        $cardData['cardname'] = str_replace(" ", "_", $result['name']);
+        $cardData['cardname'] = preg_replace('/[^a-zA-Z_]/', "", $cardData['cardname']);
     
-    $cardData['picUrl'] = $result['image_uris']['normal'];
-    return $cardData;
+        $cardData['picUrl'] = $result['image_uris']['normal'];
+        
+        return $cardData;
+    }
 }
 
 
