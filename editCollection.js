@@ -49,8 +49,11 @@ function addCard(isCommander){
     $.post("addCardToCollection.php", 
             {cardname : $("input#cardName").val(), quantity : parseInt(($("input#amount").val()))},
             function(data){
-                if(data == "Error: that card is already in the collection"){
-                    $("span#serverError").text("That card is already in your collection.");
+                $("span#serverError").text(" ");//first remove any old error message
+                
+                
+                if(data.startsWith("Error: ")){
+                    $("span#serverError").text(data);
                 }
                 else{
                     $("div#formToAddCard")[0].insertAdjacentHTML('beforebegin', data);
