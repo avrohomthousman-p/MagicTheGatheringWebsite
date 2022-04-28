@@ -11,6 +11,14 @@ $connection = new mysqli("localhost", "root",  "INSERT PASSWORD", "CardCollectio
 //use the methods from the connectToScryfall.php file to get the card's name
 //(formatted correctly) and the url for the card image
 $data = requestCardData($_POST['cardname']);
+
+//check if scryfall found the card
+if($data['object'] == 'error'){
+    echo("Error: ");
+    echo($data['details']);
+    exit();
+}
+
 $_POST['cardname'] = $data['cardname'];
 $_POST['imgUrl'] = $data['picUrl'];
 
