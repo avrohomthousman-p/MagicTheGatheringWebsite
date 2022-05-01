@@ -28,23 +28,23 @@ function createAccount($username, $password){
     $username = htmlentities($username);
     $password = htmlentities($password);
     
-    $connection = new mysqli("localhost", "root",  "INSERT PASSWORD", "CardCollections");
+    $connection = new mysqli("localhost", "root",  "Indeed1!", "CardCollections");
     
     $query = <<< TEXT
             SELECT
             CASE
                 WHEN EXISTS (SELECT Username FROM Users WHERE Username = '{$username}') 
-                THEN 'That username is taken'
-                ELSE (SELECT MAX(UserID) AS 'UserID' FROM Users)
+                THEN 'Taken'
+                ELSE 'Availible'
                 
                 END AS Availibility;
 TEXT;
     
     $results = ($connection->query($query))->fetch_assoc();
     
-    if($results['Availibility'] !== "That username is taken"){
+    if($results['Availibility'] === "Availible"){
         $connection->query("INSERT INTO Users (Username, Password) VALUES ('{$username}', '{$password}');");
-        $results['Availibility'] += 1;
+        $results = ($connection->query("SELECT LAST_INSERT_ID() AS Availibility;"))->fetch_assoc();
     }
     
     $connection->close();
