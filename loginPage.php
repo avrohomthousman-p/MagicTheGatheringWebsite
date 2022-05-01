@@ -39,7 +39,7 @@ else if(isset($_POST['createAccount'])){//if the user just created a new account
     $username = $_POST['username'];
     $password = $_POST['password'];
     $addAttempt = createAccount($username, $password);
-    if($addAttempt === "That username is taken"){
+    if($addAttempt === "Taken"){
         $_SESSION['loggedIn'] = false;
         $output = createLoginBoxWithMessages("That username is taken", "&nbsp");
         array_push($links, "<script src=\"errorCheckLogin.js\"></script>");
