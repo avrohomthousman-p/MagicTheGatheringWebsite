@@ -47,6 +47,12 @@ if($result['url'] === "need new card"){
     $card = getRandomCard();
     
     
+    if($card['object'] == "error"){
+        echo("<div class=\"text-center\"><h1>Unable to Connect to Scryfall. Please Check Back Later.</h1></div>");
+        exit();
+    }
+    
+    
     //query to add the card to the cards table of the database if it isnt already there
     $query = <<< TEXT
         INSERT IGNORE INTO Cards (Name, PicUrl)
