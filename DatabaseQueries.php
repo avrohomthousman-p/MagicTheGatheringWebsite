@@ -1,10 +1,14 @@
 <?php
 
+
+include 'databaseLoginData.php';
+
+
 function login($username, $password){
     $username = htmlentities($username);
     $password = htmlentities($password);
     
-    $connection = new mysqli("localhost", "root",  "INSERT PASSWORD", "CardCollections");
+    $connection = new mysqli("localhost", "root",  getDatabasePassword(), "CardCollections");
     
     $results = $connection->query("SELECT * FROM Users WHERE Username = '{$username}';");
     $connection->close();
@@ -28,7 +32,7 @@ function createAccount($username, $password){
     $username = htmlentities($username);
     $password = htmlentities($password);
     
-    $connection = new mysqli("localhost", "root",  "Indeed1!", "CardCollections");
+    $connection = new mysqli("localhost", "root",  getDatabasePassword(), "CardCollections");
     
     $query = <<< TEXT
             SELECT
@@ -56,7 +60,7 @@ TEXT;
 
 
 function loadAllDecks($userID){
-    $connection = new mysqli("localhost", "root",  "INSERT PASSWORD", "CardCollections");
+    $connection = new mysqli("localhost", "root",  getDatabasePassword(), "CardCollections");
     
     $results = $connection->query("SELECT DeckID, Deckname FROM Decks WHERE UserID = '{$userID}';");
     $connection->close();
@@ -68,7 +72,7 @@ function loadAllDecks($userID){
 function loadDeckName($deckID){
     $deckID = (int)$deckID;
     
-    $connection = new mysqli("localhost", "root",  "INSERT PASSWORD", "CardCollections");
+    $connection = new mysqli("localhost", "root",  getDatabasePassword(), "CardCollections");
     
     $results = $connection->query("SELECT Deckname FROM Decks WHERE DeckID = {$deckID};");
     $connection->close();
@@ -80,7 +84,7 @@ function loadDeckName($deckID){
 
 function loadDeckCommanders($deckID){
     $deckID = (int)$deckID;
-    $connection = new mysqli("localhost", "root",  "INSERT PASSWORD", "CardCollections");
+    $connection = new mysqli("localhost", "root",  getDatabasePassword(), "CardCollections");
     
     $query = <<< TEXT
             SELECT PicUrl
@@ -99,7 +103,7 @@ TEXT;
 
 function loadDeckContents($deckID){
     $deckID = (int)$deckID;
-    $connection = new mysqli("localhost", "root",  "INSERT PASSWORD", "CardCollections");
+    $connection = new mysqli("localhost", "root",  getDatabasePassword(), "CardCollections");
     
     $query = <<< TEXT
             SELECT PicUrl, Name, Quantity
@@ -121,7 +125,7 @@ function hasSufficentAvailibleCards($cardname, $quantityNeeded){
         session_start();
     }
     
-    $connection = new mysqli("localhost", "root",  "INSERT PASSWORD", "CardCollections");
+    $connection = new mysqli("localhost", "root",  getDatabasePassword(), "CardCollections");
     
     $cardname = str_replace("'", "''", $cardname);//escape all apostrophies
     $result = $connection->query("SELECT Availible FROM OwnedBY WHERE UserID = "
@@ -157,7 +161,7 @@ function isDeckNameAvailible($deckName){
     if (session_status() === PHP_SESSION_NONE) {
         session_start();
     }
-    $connection = new mysqli("localhost", "root",  "INSERT PASSWORD", "CardCollections");
+    $connection = new mysqli("localhost", "root",  getDatabasePassword(), "CardCollections");
     
     
     $query = <<< TEXT

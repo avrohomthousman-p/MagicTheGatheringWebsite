@@ -24,7 +24,7 @@ TEXT;
 
 function getCardDataFromDatabase($cardname){
     $cardQuantities = "";
-    $connection = new mysqli("localhost", "root",  "INSERT PASSWORD", "CardCollections");
+    $connection = new mysqli("localhost", "root",  getDatabasePassword(), "CardCollections");
     
     
     //this query gets info about all decks that have the card in question
@@ -63,7 +63,7 @@ TEXT;
 
 
 
-
+include 'databaseLoginData.php';
 include 'header.php';
 include 'connectToScryfall.php';
 include 'footer.php';

@@ -1,4 +1,9 @@
 <?php
+
+include 'databaseLoginData.php';
+
+
+
 function updateDatabase($connection, $quantity, $cardname){
     //query to add the cards to the collection
     $query = <<< TEXT
@@ -33,7 +38,7 @@ function cleanPostArray(){
 
 
 session_start();
-$connection = new mysqli("localhost", "root",  "INSERT PASSWORD", "CardCollections");
+$connection = new mysqli("localhost", "root",  getDatabasePassword(), "CardCollections");
 
 
 $changes = cleanPostArray();

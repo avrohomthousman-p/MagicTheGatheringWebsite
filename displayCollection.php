@@ -1,9 +1,10 @@
 <?php
+include 'databaseLoginData.php';
 include 'header.php';
 include 'displayCard.php';
 include 'footer.php';
 
-$connection = new mysqli("localhost", "root",  "INSERT PASSWORD", "CardCollections");
+$connection = new mysqli("localhost", "root",  getDatabasePassword(), "CardCollections");
 
 session_start();
 

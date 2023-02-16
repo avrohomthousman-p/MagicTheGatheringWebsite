@@ -12,7 +12,7 @@ TEXT;
 
 
 
-
+include 'databaseLoginData.php';
 include 'header.php';
 include 'connectToScryfall.php';
 include 'footer.php';
@@ -24,7 +24,7 @@ echo(createHead("Manage Your Collection-Home", array()));
 
 
 
-$connection = new mysqli("localhost", "root",  "INSERT PASSWORD", "CardCollections");
+$connection = new mysqli("localhost", "root",  getDatabasePassword(), "CardCollections");
 
 
 //query to check if the card we have has been updated for today

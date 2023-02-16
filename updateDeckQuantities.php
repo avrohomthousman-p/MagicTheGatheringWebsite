@@ -1,5 +1,8 @@
 <?php
 
+include 'databaseLoginData.php';
+
+
 //checks if the user has enough copies of a card to add it to the deck
 function hasSufficentCopies($connection, $amountNeeded, $cardname){
     $query = <<< TEXT
@@ -88,7 +91,7 @@ TEXT;
 
 
 session_start();
-$connection = new mysqli("localhost", "root",  "INSERT PASSWORD", "CardCollections");
+$connection = new mysqli("localhost", "root",  getDatabasePassword(), "CardCollections");
 
  
 $cardData = cleanPostArray();

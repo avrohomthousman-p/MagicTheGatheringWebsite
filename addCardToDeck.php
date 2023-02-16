@@ -1,11 +1,12 @@
 <?php
 
+include 'databaseLoginData.php';
 include 'connectToScryfall.php';
 include 'displayCard.php';
 
 session_start();
     
-$connection = new mysqli("localhost", "root",  "INSERT PASSWORD", "CardCollections");
+$connection = new mysqli("localhost", "root",  getDatabasePassword(), "CardCollections");
 
 
 

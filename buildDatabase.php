@@ -1,6 +1,13 @@
 <?php
+
+include 'databaseLoginData.php';
+
+define("DBpassword", getDatabasePassword());
+
+
+
 function createTables(){
-    $connection = new mysqli("localhost", "root",  "INSERT PASSWORD", "CardCollections");
+    $connection = new mysqli("localhost", "root",  DBpassword, "CardCollections");
     
     
     $query = <<< TEXT
@@ -80,7 +87,7 @@ TEXT;
 
 
 function populateTables(){
-    $connection = new mysqli("localhost", "root",  "INSERT PASSWORD", "CardCollections");
+    $connection = new mysqli("localhost", "root",  DBpassword, "CardCollections");
 
 
     //Fill Users table
@@ -251,7 +258,7 @@ function populateTables(){
 
 
 function printTable($table){
-    $connection = new mysqli("localhost", "root",  "INSERT PASSWORD", "CardCollections");
+    $connection = new mysqli("localhost", "root",  DBpassword, "CardCollections");
     
     $result = $connection->query("SELECT * FROM {$table};");
 
