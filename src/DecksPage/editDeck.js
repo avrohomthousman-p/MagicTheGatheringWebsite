@@ -95,7 +95,7 @@ function saveChanges(){
             
             if(confirm(data)){
                 postData.addWherePossible = "true";
-                $.post("updateDeck.php", postData, function(data){
+                $.post("updateDeckQuantities.php", postData, function(data){
                     var needReset = data.split(/ : /);
                     needReset.forEach(function(item){
                         resetNumbersOfCards(item, deckChanges.get(item));
