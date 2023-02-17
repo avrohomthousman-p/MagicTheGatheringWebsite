@@ -24,7 +24,7 @@ echo(createHead("Manage Your Collection-Home", array()));
 
 
 
-$connection = new mysqli("localhost", "root",  getDatabasePassword(), "CardCollections");
+$connection = new mysqli(getenv("HOST"), getenv("USERNAME"), getenv("PASSWORD"), getenv("DBname"));
 
 
 //query to check if the card we have has been updated for today

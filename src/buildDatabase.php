@@ -7,7 +7,7 @@ define("DBpassword", getDatabasePassword());
 
 
 function createTables(){
-    $connection = new mysqli("localhost", "root",  DBpassword, "CardCollections");
+    $connection = new mysqli(getenv("HOST"), getenv("USERNAME"), getenv("PASSWORD"), getenv("DBname"));
     
     
     $query = <<< TEXT
@@ -87,7 +87,7 @@ TEXT;
 
 
 function populateTables(){
-    $connection = new mysqli("localhost", "root",  DBpassword, "CardCollections");
+    $connection = new mysqli(getenv("HOST"), getenv("USERNAME"), getenv("PASSWORD"), getenv("DBname"));
 
 
     //Fill Users table
@@ -258,7 +258,7 @@ function populateTables(){
 
 
 function printTable($table){
-    $connection = new mysqli("localhost", "root",  DBpassword, "CardCollections");
+    $connection = new mysqli(getenv("HOST"), getenv("USERNAME"), getenv("PASSWORD"), getenv("DBname"));
     
     $result = $connection->query("SELECT * FROM {$table};");
 

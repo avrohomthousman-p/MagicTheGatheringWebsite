@@ -4,7 +4,7 @@ include 'header.php';
 include 'displayCard.php';
 include 'footer.php';
 
-$connection = new mysqli("localhost", "root",  getDatabasePassword(), "CardCollections");
+$connection = new mysqli(getenv("HOST"), getenv("USERNAME"), getenv("PASSWORD"), getenv("DBname"));
 
 session_start();
 

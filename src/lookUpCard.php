@@ -24,7 +24,7 @@ TEXT;
 
 function getCardDataFromDatabase($cardname){
     $cardQuantities = "";
-    $connection = new mysqli("localhost", "root",  getDatabasePassword(), "CardCollections");
+    $connection = new mysqli(getenv("HOST"), getenv("USERNAME"), getenv("PASSWORD"), getenv("DBname"));
     
     
     //this query gets info about all decks that have the card in question

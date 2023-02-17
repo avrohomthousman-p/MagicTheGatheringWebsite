@@ -2,4 +2,4 @@
 .idea
 
 #File storing sensetive information
-MYSQL_data.txt
+databaseLoginData.php
