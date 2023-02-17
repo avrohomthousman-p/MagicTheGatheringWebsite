@@ -1,0 +1,8 @@
+div.deckDisplay{
+    float: left;
+    display: inline-block;
+}
+
+div#end-floating {
+    clear: both;
+}

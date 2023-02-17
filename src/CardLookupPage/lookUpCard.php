@@ -63,10 +63,10 @@ TEXT;
 
 
 
-include 'databaseLoginData.php';
-include 'header.php';
-include 'connectToScryfall.php';
-include 'footer.php';
+include '../databaseLoginData.php';
+include '../header.php';
+include '../connectToScryfall.php';
+include '../footer.php';
 
 session_start();
 

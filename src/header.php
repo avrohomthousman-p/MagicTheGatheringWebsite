@@ -1,5 +1,5 @@
 <?php
-include 'navBar.php';
+include '../navBar.php';
 
 function createHead($title, $links){
     $section = <<< TEXT
@@ -31,25 +31,9 @@ function createHead($title, $links){
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
                 crossorigin="anonymous"></script>
         
-        
-        
-        <link rel="stylesheet" href="adnantopal-slimmenu-c264256\dist\css\slimmenu.min.css" type="text/css">
 
-        <script src="adnantopal-slimmenu-c264256\dist\js\jquery.slimmenu.min.js"></script>
-
-        <script>
-        $('#navigation').slimmenu(
-        {   
-            resizeWidth: '800',
-            collapserTitle: 'Main Menu',
-            animSpeed: 'medium',
-            easingEffect: null,
-            indentChildren: false,
-            childrenIndenter: '&nbsp;'
-        });
-        </script>
         
-        <link href="background.css" rel="stylesheet" type="text/css" /> 
+        <link href="../background.css" rel="stylesheet" type="text/css" />
         
         
         

@@ -51,10 +51,10 @@ function createCommandersSection($commanders){
 
 
 
-    include 'header.php';
-    include 'displayCard.php';
-    include 'DatabaseQueries.php';
-    include 'footer.php';
+    include '../header.php';
+    include '../displayCard.php';
+    include '../DatabaseQueries.php';
+    include '../footer.php';
     
     
     session_start();
@@ -97,7 +97,7 @@ function createCommandersSection($commanders){
     
     $name = loadDeckName($_SESSION['deckID']);
     echo(createHead("Manage Your collection-{$name}", array(
-        "<link href=\"displayCard.css\" rel=\"stylesheet\" type=\"text/css\" />",
+        "<link href=\"../displayCard.css\" rel=\"stylesheet\" type=\"text/css\" />",
         "<script src=\"editDeck.js\"></script>"
     )));
     

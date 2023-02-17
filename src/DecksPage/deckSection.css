@@ -1,0 +1,17 @@
+div.deckDisplay {
+    text-align: center;
+    background-color: aliceblue;
+    margin: 5px;
+    border-radius: 10px;
+    width: 280px;
+    height: 280px;
+}
+
+div.deckDisplay h3{
+    text-transform: capitalize;
+    color: red;
+}
+
+div.deckDisplay a{
+    color: #007fff;
+}

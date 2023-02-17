@@ -1,8 +1,8 @@
 <?php
-include 'databaseLoginData.php';
-include 'header.php';
-include 'displayCard.php';
-include 'footer.php';
+include '../databaseLoginData.php';
+include '../header.php';
+include '../displayCard.php';
+include '../footer.php';
 
 $connection = new mysqli(getenv("HOST"), getenv("USERNAME"), getenv("PASSWORD"), getenv("DBname"));
 
@@ -29,7 +29,7 @@ if(!$_SESSION['loggedIn']){
 
 
 echo(createHead("Manage Your Colection-My Collection", array(
-    "<link href=\"displayCard.css\" rel=\"stylesheet\" type=\"text/css\" />",
+    "<link href=\"../displayCard.css\" rel=\"stylesheet\" type=\"text/css\" />",
     "<script src=\"editCollection.js\"></script>"
 )));
 

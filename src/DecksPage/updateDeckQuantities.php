@@ -1,6 +1,6 @@
 <?php
 
-include 'databaseLoginData.php';
+include '../databaseLoginData.php';
 
 
 //checks if the user has enough copies of a card to add it to the deck
@@ -91,7 +91,7 @@ TEXT;
 
 
 session_start();
-$connection = new mysqli("localhost", "root",  getDatabasePassword(), "CardCollections");
+$connection = new mysqli(getenv("HOST"), getenv("USERNAME"), getenv("PASSWORD"), getenv("DBname"));
 
  
 $cardData = cleanPostArray();

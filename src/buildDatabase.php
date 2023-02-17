@@ -2,7 +2,6 @@
 
 include 'databaseLoginData.php';
 
-define("DBpassword", getDatabasePassword());
 
 
 

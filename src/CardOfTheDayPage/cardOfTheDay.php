@@ -12,10 +12,10 @@ TEXT;
 
 
 
-include 'databaseLoginData.php';
-include 'header.php';
-include 'connectToScryfall.php';
-include 'footer.php';
+include '../databaseLoginData.php';
+include '../header.php';
+include '../connectToScryfall.php';
+include '../footer.php';
 
 
 echo(createHead("Manage Your Collection-Home", array()));

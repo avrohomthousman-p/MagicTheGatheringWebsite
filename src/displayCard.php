@@ -11,9 +11,9 @@ function displayCard($source, $quantity, $name){
                 </div>
             
                 <div class="d-inline">
-                    <button type="button" class="plus"><img src="images/plus.jpg" alt="plus" ></button>
+                    <button type="button" class="plus"><img src="../images/plus.jpg" alt="plus" ></button>
                     <span id="{$name}" class="quantity">{$quantity}</span>
-                    <button type="button" class="minus"><img src="images/minus.jpg" alt="minus" ></button>
+                    <button type="button" class="minus"><img src="../images/minus.jpg" alt="minus" ></button>
                 </div>
             
             </div>
@@ -38,9 +38,9 @@ function displayCardInCollection($source, $quantity, $availible, $name){
                 <div class="d-inline">
                     <div>
                     <p>Owned:</p>
-                    <button type="button" class="plus"><img src="images/plus.jpg" alt="plus" ></button>
+                    <button type="button" class="plus"><img src="../images/plus.jpg" alt="plus" ></button>
                     <span id="{$name}" class="quantity">{$quantity}</span>
-                    <button type="button" class="minus"><img src="images/minus.jpg" alt="minus" ></button>
+                    <button type="button" class="minus"><img src="../images/minus.jpg" alt="minus" ></button>
                     </div>
                     
                     <div class="availible">Availible: {$availible}</div>

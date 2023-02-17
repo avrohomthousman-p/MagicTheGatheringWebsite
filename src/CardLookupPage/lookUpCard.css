@@ -1,0 +1,21 @@
+div#cardData {
+    border: #4ae solid 5px;
+    border-radius: 5px;
+}
+
+
+form#lookUpCardForm {
+    max-width: 450px;
+    border: #4ae solid 5px;
+    border-radius: 5px;
+    margin: 30px;
+    padding: 10px;
+}
+
+div#cardImg img {
+    max-width: 230px;
+}
+
+li {
+    background-color: rgb(16, 26, 61);
+}

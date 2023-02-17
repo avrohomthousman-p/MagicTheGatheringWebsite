@@ -1,8 +1,8 @@
 <?php
 
-include 'databaseLoginData.php';
-include 'connectToScryfall.php';
-include 'displayCard.php';
+include '../databaseLoginData.php';
+include '../connectToScryfall.php';
+include '../displayCard.php';
 
 session_start();
     

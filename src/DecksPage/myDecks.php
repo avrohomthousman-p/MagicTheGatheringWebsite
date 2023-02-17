@@ -21,9 +21,9 @@ TEXT;
 
 
 
-include 'header.php';
-include 'DatabaseQueries.php';
-include 'footer.php';
+include '../header.php';
+include '../DatabaseQueries.php';
+include '../footer.php';
 
 echo(createHead("Manage Your Collection-My Decks", 
         array("<link href=\"deckSection.css\" rel=\"stylesheet\" type=\"text/css\" />",
