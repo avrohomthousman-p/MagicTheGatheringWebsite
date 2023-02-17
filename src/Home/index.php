@@ -37,7 +37,7 @@ $content = <<< TEXT
             If you have many decks and need some way of keeping track of what cards
             are where, this website is for you. Create an account or sign in to an 
             existing account by filling in the form on our login page, or by 
-            <a href="../LoginPage/loginPage.php">clicking here</a>. Then you can use the
+            <a href="../Login/loginPage.php">clicking here</a>. Then you can use the
             navigation bar above to acsess any of our pages or begin by adding
             cards to your collection and build decks with those cards.
             We can't wait to have you join!</p>
