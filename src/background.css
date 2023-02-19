@@ -13,11 +13,11 @@ body{
 }
 
 
-li {
+li.nav-item {
     background-color: buttonface;
 }
 
 
-li a:hover {
+li.nav-item a:hover {
     background-color: greenyellow;
 }
