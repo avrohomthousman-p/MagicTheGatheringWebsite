@@ -38,7 +38,7 @@ if(!isset($_SESSION['loggedIn'])){
 
 
 if(!$_SESSION['loggedIn']){
-    echo("<h1 class=\"text-center\">Please <a href=\"loginPage.php\">Log in</a> to access your decks</h1>");
+    echo("<h1 class=\"text-center\">Please <a href=\"../Login/loginPage.php\">Log in</a> to access your decks</h1>");
     echo(createFooter());
     exit();
 }

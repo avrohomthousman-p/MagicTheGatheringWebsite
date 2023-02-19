@@ -17,7 +17,7 @@ if(!$_SESSION['loggedIn']){
     echo(createHead("Manage Your Colection-My Collection", array()));
     echo("<div class=\"text-center\">");
     echo("<h1>Please log in to access this page</h1>");
-    echo("<p><a href=\"loginPage.php\">Click here</a> or use the navigation bar to log in.</p>");
+    echo("<p><a href=\"../Login/loginPage.php\">Click here</a> or use the navigation bar to log in.</p>");
     echo("</div>");
     echo(createFooter());
     exit();
